@@ -1,25 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
+import { PageIndex } from './components/PageIndex/PageIndex';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { SingleItemCard } from './components/SingleItemCard/SingleItemCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PageIndex />} />
+        <Route path="/:id" element={<SingleItemCard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
