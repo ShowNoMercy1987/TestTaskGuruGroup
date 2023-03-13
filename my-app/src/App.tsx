@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<PageIndex />} />
-        <Route path="/:id" element={<SingleItemCard />} />
+        <Route path=":id" element={<SingleItemCard />} />
       </Routes>
     </BrowserRouter>
   );
