@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/TestTaskGuruGroup/static/css/main.3cd2c154.css",
-    "main.js": "/TestTaskGuruGroup/static/js/main.21a7e9a7.js",
-    "static/js/787.28cb0dcd.chunk.js": "/TestTaskGuruGroup/static/js/787.28cb0dcd.chunk.js",
-    "static/media/Spinner.svg": "/TestTaskGuruGroup/static/media/Spinner.ec6f80716b63721807276e09af1821da.svg",
-    "index.html": "/TestTaskGuruGroup/index.html",
-    "static/media/IconLike.svg": "/TestTaskGuruGroup/static/media/IconLike.d90b301e3624c92dfa854b0bf7c9ff14.svg",
-    "main.3cd2c154.css.map": "/TestTaskGuruGroup/static/css/main.3cd2c154.css.map",
-    "main.21a7e9a7.js.map": "/TestTaskGuruGroup/static/js/main.21a7e9a7.js.map",
-    "787.28cb0dcd.chunk.js.map": "/TestTaskGuruGroup/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/testtaskgurugroup/static/css/main.3cd2c154.css",
+    "main.js": "/testtaskgurugroup/static/js/main.3ef5e5e5.js",
+    "static/js/787.28cb0dcd.chunk.js": "/testtaskgurugroup/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Spinner.svg": "/testtaskgurugroup/static/media/Spinner.ec6f80716b63721807276e09af1821da.svg",
+    "index.html": "/testtaskgurugroup/index.html",
+    "static/media/IconLike.svg": "/testtaskgurugroup/static/media/IconLike.d90b301e3624c92dfa854b0bf7c9ff14.svg",
+    "main.3cd2c154.css.map": "/testtaskgurugroup/static/css/main.3cd2c154.css.map",
+    "main.3ef5e5e5.js.map": "/testtaskgurugroup/static/js/main.3ef5e5e5.js.map",
+    "787.28cb0dcd.chunk.js.map": "/testtaskgurugroup/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3cd2c154.css",
-    "static/js/main.21a7e9a7.js"
+    "static/js/main.3ef5e5e5.js"
   ]
 }
