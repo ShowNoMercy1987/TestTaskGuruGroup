@@ -19,6 +19,7 @@ import cn from "classnames"
 
 export const PageIndex = () => {
   const [products, setProducts] = useState<ICard[]>([]);
+  const [empty, setEmpty] = useState(false)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [page, setPage] = useState(1);
@@ -30,6 +31,9 @@ export const PageIndex = () => {
         `https://testguru.ru/frontend-test/api/v1/ads?page=${page}`
       );
       setProducts([...products, ...responce.data.items]);
+      if (responce.data.items.length === 0) {
+        setEmpty(true)
+      }
       setLoading(false);
     } catch (e: unknown) {
       setLoading(false);
@@ -61,7 +65,7 @@ export const PageIndex = () => {
         <article>
           <Wrapper>
             <SectionWrapper>
-              {products.length === 0 && <EmptyCard />}
+              {empty && <EmptyCard />}
 
               <ItemsWrapper>
               {loading && <LoadingSkeleton />}
@@ -70,7 +74,7 @@ export const PageIndex = () => {
                     <Link
                       className="link"
                       key={product.id}
-                      to={`${product.id}`}
+                      to={`/index/${product.id}`}
                     >
                       <ItemCard
                         key={product.id}
