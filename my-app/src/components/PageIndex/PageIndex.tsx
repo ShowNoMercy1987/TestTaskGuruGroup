@@ -15,11 +15,11 @@ import { MoreWrapper } from "./PageIndexStyles";
 import { LoaderSpinner } from "../LoaderSpinner/LoaderSpinner";
 import { SpinnerWrapper } from "./PageIndexStyles";
 import { EmptyCard } from "../EmptyCard/EmptyCard";
-import cn from "classnames"
+import cn from "classnames";
 
 export const PageIndex = () => {
   const [products, setProducts] = useState<ICard[]>([]);
-  const [empty, setEmpty] = useState(false)
+  const [empty, setEmpty] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [page, setPage] = useState(1);
@@ -32,7 +32,7 @@ export const PageIndex = () => {
       );
       setProducts([...products, ...responce.data.items]);
       if (responce.data.items.length === 0) {
-        setEmpty(true)
+        setEmpty(true);
       }
       setLoading(false);
     } catch (e: unknown) {
@@ -68,24 +68,18 @@ export const PageIndex = () => {
               {empty && <EmptyCard />}
 
               <ItemsWrapper>
-              {loading && <LoadingSkeleton />}
+                {loading && <LoadingSkeleton />}
                 {products.map((product: ICard) => {
                   return (
-                    <Link
-                      className="link"
+                    <ItemCard
                       key={product.id}
-                      to={`/index/${product.id}`}
-                    >
-                      <ItemCard
-                        key={product.id}
-                        id={product.id}
-                        price={product.price}
-                        title={product.title}
-                        address={product.address}
-                        createdAt={product.createdAt}
-                        seen={product.seen}
-                      />
-                    </Link>
+                      id={product.id}
+                      price={product.price}
+                      title={product.title}
+                      address={product.address}
+                      createdAt={product.createdAt}
+                      seen={product.seen}
+                    />
                   );
                 })}
               </ItemsWrapper>
