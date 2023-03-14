@@ -11,7 +11,8 @@ import { ICard } from "../types/card";
 import { VisitedButton } from "../VisitedButton/VisitedButton";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Pagination } from "swiper";
+import { Link } from "react-router-dom";
 import "swiper/css/pagination";
 
 export const ItemCard = ({
@@ -33,44 +34,45 @@ export const ItemCard = ({
       <CardWrapper key={id} onClick={onClick}>
         <CardTop>
           {seen && <VisitedButton />}
-
-          <Swiper
-          className="slider-img"
-            modules={[Pagination]}
-            pagination={{ clickable: false }}
-            spaceBetween={50}
-            slidesPerView={1}
-          >
-            <SwiperSlide>
-              <img
-                className="slider-img"
-                src="https://gearbox.imgix.net/https%3A%2F%2Fix-www.imgix.net%2Fsolutions%2Fbeach.jpg?w=226&h=260&fit=crop&ixlib=js-2.0.0&s=a8008191b413be738fe881f1227afd78"
-                alt="123"
-              ></img>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                className="slider-img"
-                src="https://gearbox.imgix.net/https%3A%2F%2Fix-www.imgix.net%2Fsolutions%2Fbeach.jpg?w=226&h=260&fit=crop&ixlib=js-2.0.0&s=a8008191b413be738fe881f1227afd78"
-                alt="123"
-              ></img>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                className="slider-img"
-                src="https://gearbox.imgix.net/https%3A%2F%2Fix-www.imgix.net%2Fsolutions%2Fbeach.jpg?w=226&h=260&fit=crop&ixlib=js-2.0.0&s=a8008191b413be738fe881f1227afd78"
-                alt="123"
-              ></img>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                className="slider-img"
-                src="https://gearbox.imgix.net/https%3A%2F%2Fix-www.imgix.net%2Fsolutions%2Fbeach.jpg?w=226&h=260&fit=crop&ixlib=js-2.0.0&s=a8008191b413be738fe881f1227afd78"
-                alt="123"
-              ></img>
-            </SwiperSlide>
-            ...
-          </Swiper>
+          <Link className="link" key={id} to={`/index/${id}`}>
+            <Swiper
+              className="slider-img"
+              modules={[Pagination]}
+              pagination={{ clickable: false }}
+              spaceBetween={50}
+              slidesPerView={1}
+            >
+              <SwiperSlide>
+                <img
+                  className="slider-img"
+                  src="https://gearbox.imgix.net/https%3A%2F%2Fix-www.imgix.net%2Fsolutions%2Fbeach.jpg?w=226&h=260&fit=crop&ixlib=js-2.0.0&s=a8008191b413be738fe881f1227afd78"
+                  alt="123"
+                ></img>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className="slider-img"
+                  src="https://gearbox.imgix.net/https%3A%2F%2Fix-www.imgix.net%2Fsolutions%2Fbeach.jpg?w=226&h=260&fit=crop&ixlib=js-2.0.0&s=a8008191b413be738fe881f1227afd78"
+                  alt="123"
+                ></img>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className="slider-img"
+                  src="https://gearbox.imgix.net/https%3A%2F%2Fix-www.imgix.net%2Fsolutions%2Fbeach.jpg?w=226&h=260&fit=crop&ixlib=js-2.0.0&s=a8008191b413be738fe881f1227afd78"
+                  alt="123"
+                ></img>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className="slider-img"
+                  src="https://gearbox.imgix.net/https%3A%2F%2Fix-www.imgix.net%2Fsolutions%2Fbeach.jpg?w=226&h=260&fit=crop&ixlib=js-2.0.0&s=a8008191b413be738fe881f1227afd78"
+                  alt="123"
+                ></img>
+              </SwiperSlide>
+              ...
+            </Swiper>
+          </Link>
         </CardTop>
         <CardBottom>
           <CardBottomWrapper>
